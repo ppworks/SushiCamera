@@ -57,8 +57,7 @@
     SimpleCam * simpleCam = [[SimpleCam alloc]init];
     simpleCam.delegate = self;
     simpleCam.hideBackButton = YES;
-    
-    [simpleCam setDisablePhotoPreview:YES];
+    simpleCam.controlAnimateDuration = 0.0;
     [self presentViewController:simpleCam animated:NO completion:nil];
 }
 
