@@ -55,8 +55,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="sushiyuki_01" width="300" height="300"/>
-        <image name="sushiyuki_02" width="300" height="300"/>
+        <image name="sushiyuki_01" width="150" height="150"/>
+        <image name="sushiyuki_02" width="150" height="150"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
