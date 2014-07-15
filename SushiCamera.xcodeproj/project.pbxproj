@@ -56,6 +56,7 @@
 		2484F29B1974FDDD00EEA7A3 /* SushiCameraTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SushiCameraTests-Info.plist"; sourceTree = "<group>"; };
 		2484F29D1974FDDD00EEA7A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2484F29F1974FDDD00EEA7A3 /* SushiCameraTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SushiCameraTests.m; sourceTree = "<group>"; };
+		2484F2AD197502EB00EEA7A3 /* libdyld.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libdyld.dylib; path = usr/lib/system/libdyld.dylib; sourceTree = SDKROOT; };
 		A749005C8C5E45B5AC22D0FA /* libPods-SushiCamera.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SushiCamera.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF03D5C82A9748EEA499BD61 /* Pods-SushiCamera.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SushiCamera.xcconfig"; path = "Pods/Pods-SushiCamera.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +109,7 @@
 		2484F2701974FDDD00EEA7A3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2484F2AD197502EB00EEA7A3 /* libdyld.dylib */,
 				2484F2711974FDDD00EEA7A3 /* Foundation.framework */,
 				2484F2731974FDDD00EEA7A3 /* CoreGraphics.framework */,
 				2484F2751974FDDD00EEA7A3 /* UIKit.framework */,
@@ -386,7 +388,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -419,7 +421,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -435,6 +437,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SushiCamera/SushiCamera-Prefix.pch";
 				INFOPLIST_FILE = "SushiCamera/SushiCamera-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/system",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -449,6 +455,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SushiCamera/SushiCamera-Prefix.pch";
 				INFOPLIST_FILE = "SushiCamera/SushiCamera-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/system",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

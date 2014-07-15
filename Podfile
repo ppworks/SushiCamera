@@ -1,7 +1,8 @@
 platform :ios, '6.0'
 
 target "SushiCamera" do
-  pod 'DBCamera', '~> 2.3'
+  pod 'GPUImage'
+  pod 'SimpleCam'
 end
 
 target "SushiCameraTests" do

@@ -1,13 +1,13 @@
 PODS:
-  - DBCamera (2.3.2):
-    - GPUImage (~> 0.1)
   - GPUImage (0.1.4)
+  - SimpleCam (0.1.0)
 
 DEPENDENCIES:
-  - DBCamera (~> 2.3)
+  - GPUImage
+  - SimpleCam
 
 SPEC CHECKSUMS:
-  DBCamera: 83f13967ede8cac9e734ac32e72d5d39d0e0e0cd
   GPUImage: ac2bde5f4dbea02a81ced6313964cec1f2043ca9
+  SimpleCam: 6ee04de1e3af478aa1e57587c217defe17e100f6
 
 COCOAPODS: 0.33.1
