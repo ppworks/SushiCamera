@@ -4,10 +4,14 @@ PODS:
 
 DEPENDENCIES:
   - GPUImage
-  - SimpleCam
+  - SimpleCam (from `https://github.com/ppworks/SimpleCam`)
+
+EXTERNAL SOURCES:
+  SimpleCam:
+    :git: https://github.com/ppworks/SimpleCam
 
 SPEC CHECKSUMS:
   GPUImage: ac2bde5f4dbea02a81ced6313964cec1f2043ca9
-  SimpleCam: 6ee04de1e3af478aa1e57587c217defe17e100f6
+  SimpleCam: 75bd1cd6aeddd129f3c237710f665194c2474631
 
 COCOAPODS: 0.33.1
