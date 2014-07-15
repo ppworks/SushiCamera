@@ -11,7 +11,6 @@
 #import <UIKit/UIKit.h>
 #import "SimpleCam.h"
 
-
 @interface ViewController () <SimpleCamDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *previewImageView;
 @property (weak, nonatomic) IBOutlet UIButton *yesButton;
