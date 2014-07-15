@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		243D6D4C1975E5B7009A0425 /* SushiCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 243D6D4B1975E5B7009A0425 /* SushiCamera.m */; };
+		243D6D4D1975E5B7009A0425 /* SushiCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 243D6D4B1975E5B7009A0425 /* SushiCamera.m */; };
 		2484F2721974FDDD00EEA7A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2484F2711974FDDD00EEA7A3 /* Foundation.framework */; };
 		2484F2741974FDDD00EEA7A3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2484F2731974FDDD00EEA7A3 /* CoreGraphics.framework */; };
 		2484F2761974FDDD00EEA7A3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2484F2751974FDDD00EEA7A3 /* UIKit.framework */; };
@@ -40,6 +42,9 @@
 /* Begin PBXFileReference section */
 		243AF35119757D3D00F34B53 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		243AF35219757D3D00F34B53 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		243D6D491975E2E8009A0425 /* SimpleCam_ControlsAccessible.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleCam_ControlsAccessible.h; sourceTree = "<group>"; };
+		243D6D4A1975E5B7009A0425 /* SushiCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SushiCamera.h; sourceTree = "<group>"; };
+		243D6D4B1975E5B7009A0425 /* SushiCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SushiCamera.m; sourceTree = "<group>"; };
 		2484F26E1974FDDD00EEA7A3 /* SushiCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SushiCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2484F2711974FDDD00EEA7A3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2484F2731974FDDD00EEA7A3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -137,6 +142,9 @@
 				2484F28C1974FDDD00EEA7A3 /* Images.xcassets */,
 				2484F2781974FDDD00EEA7A3 /* Supporting Files */,
 				24B87E9F19758C6C0050A532 /* Localizable.strings */,
+				243D6D491975E2E8009A0425 /* SimpleCam_ControlsAccessible.h */,
+				243D6D4A1975E5B7009A0425 /* SushiCamera.h */,
+				243D6D4B1975E5B7009A0425 /* SushiCamera.m */,
 			);
 			path = SushiCamera;
 			sourceTree = "<group>";
@@ -307,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2484F28B1974FDDD00EEA7A3 /* ViewController.m in Sources */,
+				243D6D4C1975E5B7009A0425 /* SushiCamera.m in Sources */,
 				2484F2821974FDDD00EEA7A3 /* AppDelegate.m in Sources */,
 				2484F27E1974FDDD00EEA7A3 /* main.m in Sources */,
 			);
@@ -317,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2484F2A01974FDDD00EEA7A3 /* SushiCameraTests.m in Sources */,
+				243D6D4D1975E5B7009A0425 /* SushiCamera.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

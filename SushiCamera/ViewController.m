@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "GPUImage.h"
 #import <UIKit/UIKit.h>
-#import "SimpleCam.h"
+#import "SushiCamera.h"
 
 @interface ViewController () <SimpleCamDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *previewImageView;
@@ -54,10 +54,8 @@
 
 - (void)showCamera
 {
-    SimpleCam * simpleCam = [[SimpleCam alloc]init];
+    SushiCamera * simpleCam = [[SushiCamera alloc]init];
     simpleCam.delegate = self;
-    simpleCam.hideBackButton = YES;
-    simpleCam.controlAnimateDuration = 0.0;
     [self presentViewController:simpleCam animated:NO completion:nil];
 }
 
