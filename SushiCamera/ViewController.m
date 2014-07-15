@@ -13,7 +13,11 @@
 
 
 @interface ViewController () <SimpleCamDelegate>
-
+@property (weak, nonatomic) IBOutlet UIImageView *previewImageView;
+@property (weak, nonatomic) IBOutlet UIButton *yesButton;
+@property (weak, nonatomic) IBOutlet UIButton *noButton;
+- (IBAction)touchYes:(id)sender;
+- (IBAction)touchNo:(id)sender;
 @end
 
 @implementation ViewController
@@ -22,17 +26,16 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [self reset];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     //[self openCameraWithoutSegue];
-    
-    SimpleCam * simpleCam = [[SimpleCam alloc]init];
-    simpleCam.delegate = self;
-    [simpleCam setDisablePhotoPreview:YES];
-    [self presentViewController:simpleCam animated:YES completion:nil];
+    if (!self.previewImageView.image) {
+        [self showCamera];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,13 +44,58 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    NSLog(@"touchesBegan");
+    if (self.previewImageView.image) {
+        self.yesButton.hidden = NO;
+        self.noButton.hidden = NO;
+    }
+}
+
+- (void)showCamera
+{
+    SimpleCam * simpleCam = [[SimpleCam alloc]init];
+    simpleCam.delegate = self;
+    [simpleCam setDisablePhotoPreview:YES];
+    [self presentViewController:simpleCam animated:YES completion:nil];
+}
+
+- (IBAction)touchNo:(id)sender {
+    [self reset];
+    [self showCamera];
+}
+
+- (IBAction)touchYes:(id)sender
+{
+    NSLog(@"touchYes");
+    UIImageWriteToSavedPhotosAlbum(self.previewImageView.image, self, @selector(savingImageIsFinished:didFinishSavingWithError:contextInfo:), nil);
+}
+
+- (void) savingImageIsFinished:(UIImage *)_image
+      didFinishSavingWithError:(NSError *)_error
+                   contextInfo:(void *)_contextInfo
+{
+    [self reset];
+    [self showCamera];
+}
+
+- (void)reset
+{
+    NSLog(@"reset");
+    self.previewImageView.image = nil;
+    self.yesButton.hidden = YES;
+    self.noButton.hidden = YES;
+}
+
 #pragma mark SIMPLE CAM DELEGATE
 
-- (void) simpleCam:(SimpleCam *)simpleCam didFinishWithImage:(UIImage *)image {
+- (void)simpleCam:(SimpleCam *)simpleCam didFinishWithImage:(UIImage *)image {
     
     if (image) {
-        // simple cam finished with image
-        UIImage *sushiImage = [UIImage imageNamed:@"sarayuki_akami"];
+        NSArray *sushiCandidates = @[@"sushiyuki_18", @"sushiyuki_19", @"sarayuki_akami"];
+        NSString *sushi = sushiCandidates[arc4random_uniform((int)sushiCandidates.count)];
+        UIImage *sushiImage = [UIImage imageNamed:sushi];
         
         
         //UIGraphicsBeginImageContext(CGSizeMake(image.size.width, image.size.height));
@@ -67,8 +115,7 @@
         
         // フィルター適応後の画像を表示
         UIImage* outputImage = [filter imageFromCurrentFramebufferWithOrientation:image.imageOrientation];
-        
-        UIImageWriteToSavedPhotosAlbum(outputImage, nil, nil, nil);
+        self.previewImageView.image = outputImage;
     }
     else {
         // simple cam finished w/o image
