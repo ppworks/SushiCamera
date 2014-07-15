@@ -1,0 +1,13 @@
+PODS:
+  - DBCamera (2.3.2):
+    - GPUImage (~> 0.1)
+  - GPUImage (0.1.4)
+
+DEPENDENCIES:
+  - DBCamera (~> 2.3)
+
+SPEC CHECKSUMS:
+  DBCamera: 83f13967ede8cac9e734ac32e72d5d39d0e0e0cd
+  GPUImage: ac2bde5f4dbea02a81ced6313964cec1f2043ca9
+
+COCOAPODS: 0.33.1
