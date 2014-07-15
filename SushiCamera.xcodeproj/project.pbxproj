@@ -22,6 +22,8 @@
 		2484F2961974FDDD00EEA7A3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2484F2751974FDDD00EEA7A3 /* UIKit.framework */; };
 		2484F29E1974FDDD00EEA7A3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2484F29C1974FDDD00EEA7A3 /* InfoPlist.strings */; };
 		2484F2A01974FDDD00EEA7A3 /* SushiCameraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2484F29F1974FDDD00EEA7A3 /* SushiCameraTests.m */; };
+		24B87E9C19758C6C0050A532 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24B87E9F19758C6C0050A532 /* Localizable.strings */; };
+		24B87E9D19758C6C0050A532 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24B87E9F19758C6C0050A532 /* Localizable.strings */; };
 		63A0AF9B9F6444C2A0F1A9F3 /* libPods-SushiCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A749005C8C5E45B5AC22D0FA /* libPods-SushiCamera.a */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +61,8 @@
 		2484F29D1974FDDD00EEA7A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2484F29F1974FDDD00EEA7A3 /* SushiCameraTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SushiCameraTests.m; sourceTree = "<group>"; };
 		2484F2AD197502EB00EEA7A3 /* libdyld.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libdyld.dylib; path = usr/lib/system/libdyld.dylib; sourceTree = SDKROOT; };
+		24B87E9E19758C6C0050A532 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		24B87EA119758C740050A532 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A749005C8C5E45B5AC22D0FA /* libPods-SushiCamera.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SushiCamera.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF03D5C82A9748EEA499BD61 /* Pods-SushiCamera.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SushiCamera.xcconfig"; path = "Pods/Pods-SushiCamera.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,6 +136,7 @@
 				2484F28A1974FDDD00EEA7A3 /* ViewController.m */,
 				2484F28C1974FDDD00EEA7A3 /* Images.xcassets */,
 				2484F2781974FDDD00EEA7A3 /* Supporting Files */,
+				24B87E9F19758C6C0050A532 /* Localizable.strings */,
 			);
 			path = SushiCamera;
 			sourceTree = "<group>";
@@ -244,6 +249,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24B87E9C19758C6C0050A532 /* Localizable.strings in Resources */,
 				2484F2881974FDDD00EEA7A3 /* Main_iPad.storyboard in Resources */,
 				2484F28D1974FDDD00EEA7A3 /* Images.xcassets in Resources */,
 				2484F2851974FDDD00EEA7A3 /* Main_iPhone.storyboard in Resources */,
@@ -256,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2484F29E1974FDDD00EEA7A3 /* InfoPlist.strings in Resources */,
+				24B87E9D19758C6C0050A532 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +363,15 @@
 				243AF35219757D3D00F34B53 /* ja */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		24B87E9F19758C6C0050A532 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				24B87E9E19758C6C0050A532 /* Base */,
+				24B87EA119758C740050A532 /* ja */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
