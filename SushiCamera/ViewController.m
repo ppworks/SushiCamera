@@ -59,7 +59,7 @@
     simpleCam.hideBackButton = YES;
     
     [simpleCam setDisablePhotoPreview:YES];
-    [self presentViewController:simpleCam animated:YES completion:nil];
+    [self presentViewController:simpleCam animated:NO completion:nil];
 }
 
 - (IBAction)touchNo:(id)sender {
