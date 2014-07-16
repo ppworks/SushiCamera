@@ -86,10 +86,14 @@
 
 - (void)touchedCreditButton:(id)sender
 {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"credit" ofType:@"html"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:path]];
-    [self.creditView loadRequest:request];
-    self.creditView.hidden = NO;
+    if (self.creditView.hidden) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"credit" ofType:@"html"];
+        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:path]];
+        [self.creditView loadRequest:request];
+        self.creditView.hidden = NO;
+    } else {
+        self.creditView.hidden = YES;
+    }
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
