@@ -16,32 +16,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="omx-7j-9Zf">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="omx-7j-9Zf">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <button opaque="NO" alpha="0.79999999999999982" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qP5-Dr-p92">
-                                <rect key="frame" x="46" y="228" width="100" height="100"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nWL-vJ-mn9">
+                                <rect key="frame" x="48" y="136" width="224" height="296"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="sushiyuki_01">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchYes:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="IY2-Xy-G8C"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" alpha="0.79999999999999982" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQQ-OH-rPv">
-                                <rect key="frame" x="173" y="228" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="sushiyuki_02">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchNo:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rei-HN-pXf"/>
-                                </connections>
-                            </button>
+                                <subviews>
+                                    <button opaque="NO" alpha="0.79999999999999982" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qP5-Dr-p92">
+                                        <rect key="frame" x="0.0" y="98" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="CHO-AP-Cdb"/>
+                                            <constraint firstAttribute="width" constant="100" id="pXP-6K-Pek"/>
+                                        </constraints>
+                                        <state key="normal" image="sushiyuki_01">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="touchYes:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="IY2-Xy-G8C"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" alpha="0.79999999999999982" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQQ-OH-rPv">
+                                        <rect key="frame" x="124" y="98" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="3Qm-uz-Tau"/>
+                                            <constraint firstAttribute="height" constant="100" id="aXp-Av-48U"/>
+                                        </constraints>
+                                        <state key="normal" image="sushiyuki_02">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="touchNo:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rei-HN-pXf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="nWL-vJ-mn9" secondAttribute="centerY" id="ckl-vH-g3x"/>
+                            <constraint firstItem="omx-7j-9Zf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="f0R-La-b8l"/>
+                            <constraint firstAttribute="centerX" secondItem="nWL-vJ-mn9" secondAttribute="centerX" id="fx5-h8-rtn"/>
+                            <constraint firstAttribute="trailing" secondItem="omx-7j-9Zf" secondAttribute="trailing" id="g4n-5q-phd"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="omx-7j-9Zf" secondAttribute="bottom" id="ntx-7n-kgT"/>
+                            <constraint firstItem="omx-7j-9Zf" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="xlq-Sh-pLC"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="noButton" destination="DQQ-OH-rPv" id="xkL-09-nxN"/>
