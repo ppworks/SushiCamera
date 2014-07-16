@@ -31,7 +31,6 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    //[self openCameraWithoutSegue];
     if (!self.previewImageView.image) {
         [self showCamera];
     }
@@ -45,7 +44,6 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    NSLog(@"touchesBegan");
     if (self.previewImageView.image) {
         self.yesButton.hidden = NO;
         self.noButton.hidden = NO;
@@ -66,7 +64,6 @@
 
 - (IBAction)touchYes:(id)sender
 {
-    NSLog(@"touchYes");
     UIImageWriteToSavedPhotosAlbum(self.previewImageView.image, self, @selector(savingImageIsFinished:didFinishSavingWithError:contextInfo:), nil);
 }
 
@@ -80,7 +77,6 @@
 
 - (void)reset
 {
-    NSLog(@"reset");
     self.previewImageView.image = nil;
     self.yesButton.hidden = YES;
     self.noButton.hidden = YES;
@@ -121,12 +117,10 @@
     
     // Close simpleCam - use this as opposed to dismissViewController: to properly end photo session
     [simpleCam closeWithCompletion:^{
-        NSLog(@"SimpleCam is done closing ... ");
         // It is safe to launch other ViewControllers, for instance, an editor here.
     }];
 }
 
 - (void) simpleCamDidLoadCameraIntoView:(SimpleCam *)simpleCam {
-    NSLog(@"Camera loaded ... ");
 }
 @end
