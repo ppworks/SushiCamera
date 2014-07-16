@@ -129,5 +129,4 @@
 - (void) simpleCamDidLoadCameraIntoView:(SimpleCam *)simpleCam {
     NSLog(@"Camera loaded ... ");
 }
-
 @end
