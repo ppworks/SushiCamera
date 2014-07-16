@@ -34,7 +34,9 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    if (!self.creditView.hidden) {
+    if (self.creditView.hidden) {
+        [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(capturePhoto) userInfo:nil repeats:NO];
+    } else {
         self.creditView.hidden = YES;
     }
 }
