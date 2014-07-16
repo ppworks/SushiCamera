@@ -11,6 +11,7 @@
 @interface SushiCamera ()<UIWebViewDelegate>
 @property (nonatomic) UIButton *creditButton;
 @property (nonatomic) UIWebView *creditView;
+@property (nonatomic) NSTimer *captureTimer;
 @end
 
 @implementation SushiCamera
@@ -35,7 +36,11 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     if (self.creditView.hidden) {
-        [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(capturePhoto) userInfo:nil repeats:NO];
+        if (self.captureTimer) {
+            [self.captureTimer invalidate];
+            self.captureTimer = nil;
+        }
+        self.captureTimer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(capturePhoto) userInfo:nil repeats:NO];
     } else {
         self.creditView.hidden = YES;
     }
