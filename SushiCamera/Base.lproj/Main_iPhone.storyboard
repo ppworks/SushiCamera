@@ -25,7 +25,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" alpha="0.79999999999999982" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qP5-Dr-p92">
-                                        <rect key="frame" x="0.0" y="98" width="100" height="100"/>
+                                        <rect key="frame" x="0.0" y="58" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="CHO-AP-Cdb"/>
@@ -39,7 +39,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" alpha="0.79999999999999982" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQQ-OH-rPv">
-                                        <rect key="frame" x="124" y="98" width="100" height="100"/>
+                                        <rect key="frame" x="124" y="58" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="3Qm-uz-Tau"/>
@@ -50,6 +50,16 @@
                                         </state>
                                         <connections>
                                             <action selector="touchNo:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rei-HN-pXf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" alpha="0.79999999999999982" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6br-Ib-3SE">
+                                        <rect key="frame" x="87" y="175" width="50" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="tweet">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="touchTweet:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2g7-ND-p2x"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -68,6 +78,7 @@
                     <connections>
                         <outlet property="noButton" destination="DQQ-OH-rPv" id="xkL-09-nxN"/>
                         <outlet property="previewImageView" destination="omx-7j-9Zf" id="TdK-on-DM8"/>
+                        <outlet property="tweetButton" destination="6br-Ib-3SE" id="KuY-X7-uSc"/>
                         <outlet property="yesButton" destination="qP5-Dr-p92" id="Xep-xh-keR"/>
                     </connections>
                 </viewController>
@@ -79,6 +90,7 @@
     <resources>
         <image name="sushiyuki_01" width="150" height="150"/>
         <image name="sushiyuki_02" width="150" height="150"/>
+        <image name="tweet" width="100" height="81"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

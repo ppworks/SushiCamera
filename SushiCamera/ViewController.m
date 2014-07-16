@@ -10,13 +10,16 @@
 #import "GPUImage.h"
 #import <UIKit/UIKit.h>
 #import "SushiCamera.h"
+#import <Social/Social.h>
 
 @interface ViewController () <SimpleCamDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *previewImageView;
 @property (weak, nonatomic) IBOutlet UIButton *yesButton;
 @property (weak, nonatomic) IBOutlet UIButton *noButton;
+@property (weak, nonatomic) IBOutlet UIButton *tweetButton;
 - (IBAction)touchYes:(id)sender;
 - (IBAction)touchNo:(id)sender;
+- (IBAction)touchTweet:(id)sender;
 @end
 
 @implementation ViewController
@@ -47,6 +50,7 @@
     if (self.previewImageView.image) {
         self.yesButton.hidden = NO;
         self.noButton.hidden = NO;
+        self.tweetButton.hidden = NO;
     }
 }
 
@@ -62,8 +66,28 @@
     [self showCamera];
 }
 
+
 - (IBAction)touchYes:(id)sender
 {
+    [self saveImage];
+}
+
+- (IBAction)touchTweet:(id)sender {;
+    SLComposeViewController *twitterPostVC = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+    [twitterPostVC setCompletionHandler:^(SLComposeViewControllerResult result) {
+        switch (result) {
+            case SLComposeViewControllerResultDone:
+                break;
+            case SLComposeViewControllerResultCancelled:
+                break;
+        }
+    }];
+    [twitterPostVC setInitialText:[NSString stringWithFormat:@"%@", @"#お寿司カメラ #寿司ゆき"]];
+    [twitterPostVC addImage:self.previewImageView.image];
+    [self presentViewController:twitterPostVC animated:YES completion:nil];
+}
+
+- (void)saveImage {
     UIImageWriteToSavedPhotosAlbum(self.previewImageView.image, self, @selector(savingImageIsFinished:didFinishSavingWithError:contextInfo:), nil);
 }
 
@@ -80,6 +104,7 @@
     self.previewImageView.image = nil;
     self.yesButton.hidden = YES;
     self.noButton.hidden = YES;
+    self.tweetButton.hidden = YES;
 }
 
 #pragma mark SIMPLE CAM DELEGATE
